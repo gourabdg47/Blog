@@ -1,4 +1,4 @@
-baseurl = "http://gourabdg47.github.io/Blog/"
+baseurl = "https://gourabdg47.github.io/Blog/"
 languageCode = "en-us"
 title = "A Strange Blog"
 theme = "ghostwriter"
