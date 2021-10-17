@@ -1,0 +1,9 @@
+[submodule "themes/terminal"]
+	path = themes/terminal
+	url = https://github.com/panr/hugo-theme-terminal.git
+[submodule "themes/ghostwriter"]
+	path = themes/ghostwriter
+	url = https://github.com/jbub/ghostwriter.git
+[submodule "themes/compose"]
+	path = themes/compose
+	url = https://github.com/onweru/compose.git
