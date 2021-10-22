@@ -1,6 +1,6 @@
 baseurl: "https://example.com/"
 title: Ghostwriter example
-theme: evil_terminal
+theme: ghostwriter
 languageCode: en-us
 copyright: My Name
 disqusShortname: XXX

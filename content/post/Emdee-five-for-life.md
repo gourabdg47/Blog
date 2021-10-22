@@ -9,7 +9,20 @@ draft = false
 ![Example image](https://i.ibb.co/G0NSZp8/Emdee-five-for-life-activities.png)
 
 Well, you see the name ***Kikimora47***, thats me. Looks cool right! Alright let me share the steps I did to get the flag.
+# Steps[Emdee Five for Life BOX]:
+- Open "TRAGET_IP:30891" in the browser
+- we get MD5 string "7It4ykV6YGdvjIm2TE7e", we have to encrypt it fast    
+and subit a POST request.   
+- But if we manualy, it says we are slow so we have to write a 
+python script
+- I followed the blog: 
+https://bigb0ss.medium.com/htb-web-challenge-emdee-five-for-life-56cb0ddfd63f
+- I wrote a script named md5_scrypt.py where we encrypt the given 
+string and send the encrypted string to the IP using POST request and 
+it works
+- It gave the FLAG "HTB{N1c3_ScrIpt1nG_B0i!}"
 
+**md5_scrypt.py**
 <!-- ```Python -->
 ```
 import requests
@@ -46,3 +59,5 @@ rpost = req.post(url=url, data=data)
 print(rpost.text)
 ```
 <!-- {{< figure src="https://i.ibb.co/G0NSZp8/Emdee-five-for-life-activities.png" title="Steve Francia" >}} -->
+
+
