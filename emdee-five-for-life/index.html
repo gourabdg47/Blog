@@ -2,17 +2,19 @@
 <head>
 <meta charset=utf-8>
 <meta http-equiv=x-ua-compatible content="IE=edge">
-<title>Chapter 1 &#183; </title>
-<meta name=description content="The Begening So, I completed my bachalor&rsquo;s degree and master&rsquo;s degree by the year 2018. Collage days were fun, I miss them sometimes. After that, I got job in the field of AI (Artificial Intelligence). This field is/was totally new to me but it&rsquo;s interesting. This AI (deep Learning) are nothing more then some Statistical model which can help the machine work like human brain (its tries to, not perfect yet.">
+<title>Chapter 3 &#183; </title>
+<meta name=description content="[Challenge 1] Emdee five for life Well, you see the name Kikimora47, thats me. Looks cool right! Alright let me share the steps I did to get the flag.
+import requests import hashlib import re req = requests.session() url = &#34;http://134.209.27.142:31344/&#34; GET request rget = req.get(url) html = rget.content # Save the GET request Strip HTML def html_tags(html): clean = re.compile('<.*?>') return re.sub(clean, '', html.decode('UTF-8')) Split Random String out1 = html_tags(html) out2 = out1.">
 <meta name=HandheldFriendly content="True">
 <meta name=MobileOptimized content="320">
 <meta name=generator content="Hugo 0.88.1">
 <meta name=robots content="index,follow">
 <meta name=viewport content="width=device-width,initial-scale=1">
-<meta property="og:title" content="Chapter 1">
-<meta property="og:description" content="The Begening So, I completed my bachalor&rsquo;s degree and master&rsquo;s degree by the year 2018. Collage days were fun, I miss them sometimes. After that, I got job in the field of AI (Artificial Intelligence). This field is/was totally new to me but it&rsquo;s interesting. This AI (deep Learning) are nothing more then some Statistical model which can help the machine work like human brain (its tries to, not perfect yet.">
+<meta property="og:title" content="Chapter 3">
+<meta property="og:description" content="[Challenge 1] Emdee five for life Well, you see the name Kikimora47, thats me. Looks cool right! Alright let me share the steps I did to get the flag.
+import requests import hashlib import re req = requests.session() url = &#34;http://134.209.27.142:31344/&#34; GET request rget = req.get(url) html = rget.content # Save the GET request Strip HTML def html_tags(html): clean = re.compile('<.*?>') return re.sub(clean, '', html.decode('UTF-8')) Split Random String out1 = html_tags(html) out2 = out1.">
 <meta property="og:type" content="article">
-<meta property="og:url" content="https://gourabdg47.github.io/Blog/the-beginning/">
+<meta property="og:url" content="https://gourabdg47.github.io/Blog/emdee-five-for-life/">
 <link rel=stylesheet href=https://gourabdg47.github.io/Blog/dist/site.css>
 <link rel=stylesheet href=https://gourabdg47.github.io/Blog/dist/syntax.css>
 <link rel=stylesheet href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,600,700,300&subset=latin,cyrillic-ext,latin-ext,cyrillic">
@@ -44,9 +46,9 @@
 <div class=container>
 <article class=post-container itemscope itemtype=http://schema.org/BlogPosting>
 <header class=post-header>
-<h1 class=post-title itemprop="name headline">Chapter 1</h1>
+<h1 class=post-title itemprop="name headline">Chapter 3</h1>
 <p class="post-date post-line">
-<span>Published <time datetime=2021-10-19 itemprop=datePublished>Tue, Oct 19, 2021</time></span>
+<span>Published <time datetime=2021-10-22 itemprop=datePublished>Fri, Oct 22, 2021</time></span>
 <span>by</span>
 <span itemscope itemprop=author itemtype=https://schema.org/Person>
 <span itemprop=name>
@@ -56,11 +58,45 @@
 </p>
 </header>
 <div class="post-content clearfix" itemprop=articleBody>
-<h2 id=the-begening>The Begening</h2>
-<p>So, I completed my bachalor&rsquo;s degree and master&rsquo;s degree by the year 2018. Collage days were fun, I miss them sometimes. After that, I got job in the field of AI (Artificial Intelligence). This field is/was totally new to me but it&rsquo;s interesting. This AI <code>(deep Learning)</code> are nothing more then some Statistical model which can help the machine work like human brain <code>(its tries to, not perfect yet. Long way to go still)</code>. I find this field interesting because with these models, we can really solve some dam complicated problems <code>(using CNN, NLP, etc)</code> for example <strong>Tesla</strong> uses lots of sensor data and other stuff for there self-driving car, oops! anyways. So, now am thinking to try a new field called <code>Cyber Security</code> or <code>pentester</code>. I started with <a href=https://app.hackthebox.eu/>HackTheBox</a></p>
+<h2 id=challenge-1-emdee-five-for-life>[Challenge 1] Emdee five for life</h2>
+<p><img src=https://i.ibb.co/G0NSZp8/Emdee-five-for-life-activities.png alt="Example image"></p>
+<p>Well, you see the name <em><strong>Kikimora47</strong></em>, thats me. Looks cool right! Alright let me share the steps I did to get the flag.</p>
+<pre tabindex=0><code>import requests
+import hashlib
+import re
+
+req = requests.session()
+url = &quot;http://134.209.27.142:31344/&quot;
+
+GET request
+rget = req.get(url)
+html = rget.content # Save the GET request
+
+Strip HTML
+def html_tags(html):
+    clean = re.compile('&lt;.*?&gt;')
+    return re.sub(clean, '', html.decode('UTF-8'))
+
+Split Random String
+out1 = html_tags(html)
+out2 = out1.split('string')[1]
+out3 = out2.rstrip()
+
+print(out3)
+
+MD5 Encrypt
+mdHash = hashlib.md5(out3).hexdigest()
+print(mdHash)
+
+POST Request
+data = dict(hash=mdHash)
+rpost = req.post(url=url, data=data)
+
+print(rpost.text)
+</code></pre>
 </div>
 <footer class="post-footer clearfix"><div class=share>
-<a class=icon-twitter href="https://twitter.com/share?text=Chapter%201&url=https%3a%2f%2fgourabdg47.github.io%2fBlog%2fthe-beginning%2f" onclick="return window.open(this.href,'twitter-share','width=550,height=235'),!1" aria-label="Share on Twitter">
+<a class=icon-twitter href="https://twitter.com/share?text=Chapter%203&url=https%3a%2f%2fgourabdg47.github.io%2fBlog%2femdee-five-for-life%2f" onclick="return window.open(this.href,'twitter-share','width=550,height=235'),!1" aria-label="Share on Twitter">
 <i class="fa fa-twitter" aria-hidden=true></i>
 </a>
 </div>
