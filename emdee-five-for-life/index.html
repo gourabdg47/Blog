@@ -4,7 +4,7 @@
 <meta http-equiv=x-ua-compatible content="IE=edge">
 <title>Chapter 3 &#183; </title>
 <meta name=description content="[Challenge 1] Emdee five for life Well, you see the name Kikimora47, thats me. Looks cool right! Alright let me share the steps I did to get the flag.
-import requests import hashlib import re req = requests.session() url = &#34;http://134.209.27.142:31344/&#34; GET request rget = req.get(url) html = rget.content # Save the GET request Strip HTML def html_tags(html): clean = re.compile('<.*?>') return re.sub(clean, '', html.decode('UTF-8')) Split Random String out1 = html_tags(html) out2 = out1.">
+Steps[Emdee Five for Life BOX]:  Open &ldquo;TRAGET_IP:30891&rdquo; in the browser we get MD5 string &ldquo;7It4ykV6YGdvjIm2TE7e&rdquo;, we have to encrypt it fast and subit a POST request. But if we manualy, it says we are slow so we have to write a python script I followed the blog: https://bigb0ss.">
 <meta name=HandheldFriendly content="True">
 <meta name=MobileOptimized content="320">
 <meta name=generator content="Hugo 0.88.1">
@@ -12,7 +12,7 @@ import requests import hashlib import re req = requests.session() url = &#34;htt
 <meta name=viewport content="width=device-width,initial-scale=1">
 <meta property="og:title" content="Chapter 3">
 <meta property="og:description" content="[Challenge 1] Emdee five for life Well, you see the name Kikimora47, thats me. Looks cool right! Alright let me share the steps I did to get the flag.
-import requests import hashlib import re req = requests.session() url = &#34;http://134.209.27.142:31344/&#34; GET request rget = req.get(url) html = rget.content # Save the GET request Strip HTML def html_tags(html): clean = re.compile('<.*?>') return re.sub(clean, '', html.decode('UTF-8')) Split Random String out1 = html_tags(html) out2 = out1.">
+Steps[Emdee Five for Life BOX]:  Open &ldquo;TRAGET_IP:30891&rdquo; in the browser we get MD5 string &ldquo;7It4ykV6YGdvjIm2TE7e&rdquo;, we have to encrypt it fast and subit a POST request. But if we manualy, it says we are slow so we have to write a python script I followed the blog: https://bigb0ss.">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://gourabdg47.github.io/Blog/emdee-five-for-life/">
 <link rel=stylesheet href=https://gourabdg47.github.io/Blog/dist/site.css>
@@ -61,6 +61,21 @@ import requests import hashlib import re req = requests.session() url = &#34;htt
 <h2 id=challenge-1-emdee-five-for-life>[Challenge 1] Emdee five for life</h2>
 <p><img src=https://i.ibb.co/G0NSZp8/Emdee-five-for-life-activities.png alt="Example image"></p>
 <p>Well, you see the name <em><strong>Kikimora47</strong></em>, thats me. Looks cool right! Alright let me share the steps I did to get the flag.</p>
+<h1 id=stepsemdee-five-for-life-box>Steps[Emdee Five for Life BOX]:</h1>
+<ul>
+<li>Open &ldquo;TRAGET_IP:30891&rdquo; in the browser</li>
+<li>we get MD5 string &ldquo;7It4ykV6YGdvjIm2TE7e&rdquo;, we have to encrypt it fast <br>
+and subit a POST request.</li>
+<li>But if we manualy, it says we are slow so we have to write a
+python script</li>
+<li>I followed the blog:
+<a href=https://bigb0ss.medium.com/htb-web-challenge-emdee-five-for-life-56cb0ddfd63f>https://bigb0ss.medium.com/htb-web-challenge-emdee-five-for-life-56cb0ddfd63f</a></li>
+<li>I wrote a script named md5_scrypt.py where we encrypt the given
+string and send the encrypted string to the IP using POST request and
+it works</li>
+<li>It gave the FLAG &ldquo;HTB{N1c3_ScrIpt1nG_B0i!}&rdquo;</li>
+</ul>
+<p><strong>md5_scrypt.py</strong></p>
 <pre tabindex=0><code>import requests
 import hashlib
 import re
